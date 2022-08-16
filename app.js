@@ -1,7 +1,7 @@
 console.log("Let's get this party started!");
 
 async function getGif(search) {
-    const result = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${search}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`);
+    const result = await axios.get(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym`);
     const url = result.data.data[(Math.floor(Math.random()*50))].images.original.url;
     return url
 }
